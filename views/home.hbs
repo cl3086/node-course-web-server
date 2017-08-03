@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+    </head>
+    <body>
+        {{> header}}
+        <p>Some text here.</p>
+        <p>{{message}}</p>
+        <!-- we are passing in welcomeMessage, if we want to pass in multiple, just add a space and
+            the variable name-->
+        <p>{{screamIt message}}</p>
+
+        {{> footer}}
+    </body>
+</html>
