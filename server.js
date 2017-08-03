@@ -4,6 +4,10 @@ const hbs = require("hbs");
 
 const fs = require("fs");
 
+// for heroku
+// if port assigned by heroku does not exist (locally), it will be set to 16000
+const port = process.env.PORT || 16000;
+
 var app = express();
 
 // partials are "parts of a website"
@@ -81,6 +85,7 @@ app.get("/bad", (req, res) => {
 });
 
 // listen takes also takes a function
-app.listen(16000, () => {
-    console.log("Server is on port 16000.");
+// heroku will provide an environment variable for port (dynamic)
+app.listen(port, () => {
+    console.log(`Server is on port ${port}`);
 });
