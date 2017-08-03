@@ -84,6 +84,12 @@ app.get("/bad", (req, res) => {
     });
 });
 
+app.get("/projects", (req, res) => {
+    res.render("projects.hbs", {
+        pageTitle: "Projects"
+    });
+});
+
 // listen takes also takes a function
 // heroku will provide an environment variable for port (dynamic)
 app.listen(port, () => {
